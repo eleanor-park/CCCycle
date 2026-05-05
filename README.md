@@ -1,48 +1,26 @@
-# CCCycle
+## About CCCycle
+This is a prototype of our proposed inclusive menstrual tracking web app. We built this with React, Vite, and a very basic local Node backend. 
 
-This repo is already a standard Vite + React app generated from Figma Make, so you can run and deploy it like any other frontend project.
+The pages of the app are:
+- **Onboarding:** collects optional profile details and privacy preferences to make the main app experience customized to diverse individual needs.
+- **Home:** shows the current cycle day, next period estimate, quick insights, and navigation into the rest of the app.
+- **Calendar View:** displays period and ovulation estimates across multiple months. Clicking a day opens the symptom log for that date.
+- **Symptom Log:** lets the user create or edit a daily log with bleeding, pain, mood, energy, symptoms, and notes.
+- **Insights:** shows cycle-phase-based recommendations (food, exercise, rest) and summaries.
+- **Settings:** manages settings, data export & deletion, and visibility preferences.
+- **Classroom:** provides education resources for users to learn more about their body and cycle.
+- **Connect:** allows users to view and search/filter for a wide variety of healthcare providers.
 
-## Run locally
+There's a basic JSON backend that retains data for the purposes of this prototype (server/data/store.json)!
+The app stores three main kinds of data:
+1. **Profile:** Onboarding answers and privacy/settings preferences.
+2. **Cycle:** Current cycle day, cycle length, period length, and estimated dates. 
+3. **Symptom logs:** Daily log entries, including bleeding, pain, mood, energy, symptoms, and notes.
 
-Use Node 20+ and `pnpm`.
+## To run locally
+Use Node 20+ and pnpm.
+1. ```pnpm install```
+2. ```pnpm dev```
+Open the local URL printed by Vite, usually http://localhost:5173.
 
-```bash
-cd /Users/eleanorpark/csclasses/cs1952b/CCCycle
-CI=true pnpm install
-pnpm dev
-```
-
-`pnpm dev` now starts both the Vite frontend and the local JSON-backed API server. Open the local URL printed by Vite, usually `http://localhost:5173`.
-
-If you want to run just the backend:
-
-```bash
-pnpm server
-```
-
-## Production build
-
-```bash
-pnpm build
-pnpm preview
-```
-
-The production output is written to `dist/`.
-
-## Deploy
-
-Any static host that supports Vite works:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- Cloudflare Pages
-
-For most hosts, the settings are:
-
-- Build command: `pnpm build`
-- Output directory: `dist`
-
-## Figma Make note
-
-The custom `figma:` asset handling is already implemented in `vite.config.ts`, so this project does not need a special Figma runtime to build and deploy.
+Note: We generated the initial code sketch by prompting Figma Make with our ideas, then edited the code manually to create the final result. Therefore, there are some Figma make folders / artifacts.
