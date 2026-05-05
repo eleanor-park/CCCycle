@@ -1,8 +1,16 @@
-https://eleanor-park.github.io/CCCycle/
+Check out CCCycle [here](https://eleanor-park.github.io/CCCycle/)!
 
 ## About CCCycle
 This is a prototype of our proposed inclusive menstrual tracking web app. We built this with React, Vite, and a very basic local Node backend. 
 
+Some of the main features of this app include:
+- **Wearable device data integration:** develops cycle insights based on wearable device metrics for increased accuracy and ease of use.
+- **Simplified symptom tracking:** a short, simple form that makes menstrual tracking easier and more understandable for all groups.
+- **Cycle-based health recommendations:** suggestions for diet, rest, and exercise based on cycle phases and symptoms.
+- **Educative resources:** articles that provide information and support about various menstrual phases, disorders, and identities.
+- **Provider connection:** in-app connection to specialists who can address diverse and specific menstrual health needs.
+
+## App Structure
 The pages of the app are:
 - **Onboarding:** collects optional profile details and privacy preferences to make the main app experience customized to diverse individual needs.
 - **Home:** shows the current cycle day, next period estimate, quick insights, and navigation into the rest of the app.
@@ -24,5 +32,6 @@ Use Node 20+ and pnpm.
 1. ```pnpm install```
 2. ```pnpm dev```
 Open the local URL printed by Vite, usually http://localhost:5173.
+<br><br><br>
 
-Note: We generated the initial code sketch by prompting Figma Make with our ideas, then edited the code manually to create the final result. Therefore, there are some Figma make folders / artifacts.
+_Note: We generated the initial code sketch by prompting Figma Make with our ideas, then edited the code manually to create the final result. Therefore, there are some Figma make folders / artifacts._
