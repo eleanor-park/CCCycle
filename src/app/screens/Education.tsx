@@ -215,7 +215,7 @@ export function Education() {
           <Button variant="ghost" size="icon" onClick={() => navigate(-1)}>
             <ArrowLeft className="w-5 h-5" />
           </Button>
-          <h1 className="text-lg font-semibold">Education Hub</h1>
+          <h1 className="text-lg font-semibold">Classroom</h1>
           <div className="w-10" />
         </div>
       </div>
@@ -305,14 +305,6 @@ export function Education() {
             </Button>
           </div>
         )}
-
-        {/* Coming Soon */}
-        <Card className="p-6 bg-neutral-100 border-neutral-200">
-          <h3 className="font-semibold text-neutral-900 mb-2">More Coming Soon</h3>
-          <p className="text-sm text-neutral-600">
-            We're constantly adding new lessons based on what our community wants to learn. Have a topic request? Let us know!
-          </p>
-        </Card>
       </div>
     </div>
   );

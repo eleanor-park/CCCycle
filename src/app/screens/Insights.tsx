@@ -119,7 +119,7 @@ export function Insights() {
           <Button variant="ghost" size="icon" onClick={() => navigate(-1)}>
             <ArrowLeft className="w-5 h-5" />
           </Button>
-          <h1 className="text-lg font-semibold">Insights & Recommendations</h1>
+          <h1 className="text-lg font-semibold">Cycle Insights & Recommendations</h1>
           <div className="w-10" />
         </div>
       </div>
@@ -228,19 +228,6 @@ export function Insights() {
             ))}
           </TabsContent>
         </Tabs>
-
-        {/* Learn More */}
-        <Card className="p-6 bg-teal-50 border-teal-200">
-          <h3 className="font-semibold text-neutral-900 mb-2">Want to learn more?</h3>
-          <p className="text-sm text-neutral-700 mb-4">
-            Explore our education hub for simple lessons about your cycle and health.
-          </p>
-          <Link to="/education">
-            <Button variant="outline" className="w-full border-teal-600 text-teal-700 hover:bg-teal-100">
-              Go to Education Hub
-            </Button>
-          </Link>
-        </Card>
       </div>
     </div>
   );

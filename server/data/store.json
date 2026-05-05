@@ -1,0 +1,201 @@
+{
+  "profile": {
+    "onboardingComplete": true,
+    "lifeStage": "reproductive-age",
+    "genderIdentity": "",
+    "isTrans": "no",
+    "isOnHormones": "",
+    "pregnancyStatus": "trying",
+    "contraceptives": [],
+    "wearableConnected": true,
+    "wearableType": "whoop",
+    "dataRetentionDays": 60,
+    "notifications": true,
+    "dataSharing": false,
+    "anonymousAnalytics": true,
+    "autoDelete": true
+  },
+  "cycleData": {
+    "currentDay": 15,
+    "cycleLength": 28,
+    "periodLength": 5,
+    "lastPeriodStart": "2026-04-21T05:05:39.655Z",
+    "nextPeriodEstimate": "2026-05-19T05:05:39.656Z"
+  },
+  "symptomLogs": [
+    {
+      "id": "log-5",
+      "date": "2026-04-25T16:00:00.000Z",
+      "bleeding": 1,
+      "pain": 1,
+      "mood": "good",
+      "energy": 75,
+      "notes": "Bleeding tapered off today.",
+      "selectedSymptoms": []
+    },
+    {
+      "id": "log-4",
+      "date": "2026-04-24T16:00:00.000Z",
+      "bleeding": 2,
+      "pain": 1,
+      "mood": "neutral",
+      "energy": 70,
+      "notes": "",
+      "selectedSymptoms": [
+        "Bloating"
+      ]
+    },
+    {
+      "id": "log-3",
+      "date": "2026-04-23T16:00:00.000Z",
+      "bleeding": 3,
+      "pain": 2,
+      "mood": "neutral",
+      "energy": 60,
+      "notes": "",
+      "selectedSymptoms": []
+    },
+    {
+      "id": "log-2",
+      "date": "2026-04-22T16:00:00.000Z",
+      "bleeding": 4,
+      "pain": 3,
+      "mood": "bad",
+      "energy": 45,
+      "notes": "",
+      "selectedSymptoms": [
+        "Cramps",
+        "Back pain"
+      ]
+    },
+    {
+      "id": "log-1",
+      "date": "2026-04-21T16:00:00.000Z",
+      "bleeding": 4,
+      "pain": 3,
+      "mood": "bad",
+      "energy": 40,
+      "notes": "First day of period.",
+      "selectedSymptoms": [
+        "Cramps",
+        "Fatigue"
+      ]
+    },
+    {
+      "id": "period-log-2026-03-28",
+      "date": "2026-03-28T16:00:00.000Z",
+      "bleeding": 1,
+      "pain": 1,
+      "mood": "good",
+      "energy": 75,
+      "notes": "Bleeding tapered off today.",
+      "selectedSymptoms": []
+    },
+    {
+      "id": "period-log-2026-03-27",
+      "date": "2026-03-27T16:00:00.000Z",
+      "bleeding": 2,
+      "pain": 1,
+      "mood": "neutral",
+      "energy": 70,
+      "notes": "",
+      "selectedSymptoms": [
+        "Bloating"
+      ]
+    },
+    {
+      "id": "period-log-2026-03-26",
+      "date": "2026-03-26T16:00:00.000Z",
+      "bleeding": 3,
+      "pain": 2,
+      "mood": "neutral",
+      "energy": 60,
+      "notes": "",
+      "selectedSymptoms": []
+    },
+    {
+      "id": "period-log-2026-03-25",
+      "date": "2026-03-25T16:00:00.000Z",
+      "bleeding": 4,
+      "pain": 3,
+      "mood": "bad",
+      "energy": 45,
+      "notes": "",
+      "selectedSymptoms": [
+        "Cramps",
+        "Back pain"
+      ]
+    },
+    {
+      "id": "period-log-2026-03-24",
+      "date": "2026-03-24T16:00:00.000Z",
+      "bleeding": 4,
+      "pain": 3,
+      "mood": "bad",
+      "energy": 40,
+      "notes": "First day of period.",
+      "selectedSymptoms": [
+        "Cramps",
+        "Fatigue"
+      ]
+    },
+    {
+      "id": "period-log-2026-02-28",
+      "date": "2026-02-28T17:00:00.000Z",
+      "bleeding": 1,
+      "pain": 1,
+      "mood": "good",
+      "energy": 75,
+      "notes": "Bleeding tapered off today.",
+      "selectedSymptoms": []
+    },
+    {
+      "id": "period-log-2026-02-27",
+      "date": "2026-02-27T17:00:00.000Z",
+      "bleeding": 2,
+      "pain": 1,
+      "mood": "neutral",
+      "energy": 70,
+      "notes": "",
+      "selectedSymptoms": [
+        "Bloating"
+      ]
+    },
+    {
+      "id": "period-log-2026-02-26",
+      "date": "2026-02-26T17:00:00.000Z",
+      "bleeding": 3,
+      "pain": 2,
+      "mood": "neutral",
+      "energy": 60,
+      "notes": "",
+      "selectedSymptoms": []
+    },
+    {
+      "id": "period-log-2026-02-25",
+      "date": "2026-02-25T17:00:00.000Z",
+      "bleeding": 4,
+      "pain": 3,
+      "mood": "bad",
+      "energy": 45,
+      "notes": "",
+      "selectedSymptoms": [
+        "Cramps",
+        "Back pain"
+      ]
+    },
+    {
+      "id": "period-log-2026-02-24",
+      "date": "2026-02-24T17:00:00.000Z",
+      "bleeding": 4,
+      "pain": 3,
+      "mood": "bad",
+      "energy": 40,
+      "notes": "First day of period.",
+      "selectedSymptoms": [
+        "Cramps",
+        "Fatigue"
+      ]
+    }
+  ]
+}

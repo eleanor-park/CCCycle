@@ -85,10 +85,10 @@ export function Home() {
               </div>
               <Button
                 variant="ghost"
-                size="icon"
                 onClick={() => navigate("/calendar")}
-                className="text-teal-200 hover:text-white hover:bg-white/20"
+                className="text-teal-200 hover:text-white hover:bg-white/20 gap-2 px-3"
               >
+                <span className="text-sm font-medium">View Calendar</span>
                 <Calendar className="w-8 h-8" />
               </Button>
             </div>
@@ -230,15 +230,15 @@ export function Home() {
           </Link>
           <Link to="/insights" className="flex flex-col items-center space-y-1 text-neutral-500 hover:text-teal-600">
             <TrendingUp className="w-6 h-6" />
-            <span className="text-xs font-medium">Insights</span>
+            <span className="text-xs font-medium">Cycle</span>
           </Link>
           <Link to="/education" className="flex flex-col items-center space-y-1 text-neutral-500 hover:text-teal-600">
             <BookOpen className="w-6 h-6" />
-            <span className="text-xs font-medium">Learn</span>
+            <span className="text-xs font-medium">Classroom</span>
           </Link>
           <Link to="/provider-finder" className="flex flex-col items-center space-y-1 text-neutral-500 hover:text-teal-600">
             <Stethoscope className="w-6 h-6" />
-            <span className="text-xs font-medium">Providers</span>
+            <span className="text-xs font-medium">Connect</span>
           </Link>
         </div>
       </nav>

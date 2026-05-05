@@ -261,7 +261,7 @@ export function ProviderFinder() {
           <Button variant="ghost" size="icon" onClick={() => navigate(-1)}>
             <ArrowLeft className="w-5 h-5" />
           </Button>
-          <h1 className="text-lg font-semibold">Provider Finder</h1>
+          <h1 className="text-lg font-semibold">Connect</h1>
           <div className="w-10" />
         </div>
       </div>
@@ -460,13 +460,6 @@ export function ProviderFinder() {
             </Button>
           </div>
         )}
-
-        {/* Disclaimer */}
-        <Card className="p-4 bg-neutral-100 border-neutral-200">
-          <p className="text-xs text-neutral-600">
-            <strong>Note:</strong> This directory is for informational purposes. Please verify provider credentials and availability before booking. We don't receive any compensation for referrals.
-          </p>
-        </Card>
       </div>
     </div>
   );

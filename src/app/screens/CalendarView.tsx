@@ -3,6 +3,7 @@ import { useCycleData, useSymptomLogs, useUserProfile, shouldShowPhaseByDefault 
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { ArrowLeft } from "lucide-react";
+import { normalizeDateKey } from "../lib/data";
 
 export function CalendarView() {
   const navigate = useNavigate();
@@ -40,14 +41,8 @@ export function CalendarView() {
   };
 
   const hasSymptomLog = (date: Date) => {
-    return symptomLogs.some((log: any) => {
-      const logDate = new Date(log.date);
-      return (
-        logDate.getDate() === date.getDate() &&
-        logDate.getMonth() === date.getMonth() &&
-        logDate.getFullYear() === date.getFullYear()
-      );
-    });
+    const dayKey = normalizeDateKey(date);
+    return symptomLogs.some((log: any) => normalizeDateKey(log.date) === dayKey);
   };
 
   const renderMonth = (monthOffset: number) => {
@@ -85,17 +80,19 @@ export function CalendarView() {
       }
 
       days.push(
-        <div
+        <button
+          type="button"
           key={day}
+          onClick={() => navigate(`/symptom-log?date=${normalizeDateKey(date)}`)}
           className={`h-12 flex flex-col items-center justify-center rounded-lg border ${
             isToday ? "border-teal-600 bg-teal-50" : "border-neutral-100"
-          } ${bgColor} relative`}
+          } ${bgColor} relative transition-colors hover:border-teal-400 hover:bg-teal-50/70`}
         >
           <span className={`text-sm ${isToday ? "font-semibold text-teal-900" : "text-neutral-700"}`}>
             {day}
           </span>
           {hasLog && <div className="w-1 h-1 rounded-full bg-teal-600 absolute bottom-1" />}
-        </div>
+        </button>
       );
     }
 

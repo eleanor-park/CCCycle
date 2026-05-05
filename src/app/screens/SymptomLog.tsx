@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useEffect, useMemo, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router";
 import { useSymptomLogs } from "../hooks/useStorage";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
@@ -7,20 +7,27 @@ import { Label } from "../components/ui/label";
 import { Slider } from "../components/ui/slider";
 import { Textarea } from "../components/ui/textarea";
 import { ArrowLeft, Check, Droplet, Zap, Heart, Frown, Smile, Meh, Circle } from "lucide-react";
+import { createSymptomLog, normalizeDateKey, type SymptomLog as SymptomLogEntry } from "../lib/data";
 
 export function SymptomLog() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [logs, setLogs] = useSymptomLogs();
+  const selectedDate = searchParams.get("date");
+  const selectedDateKey = normalizeDateKey(selectedDate ?? new Date());
 
-  const [formData, setFormData] = useState({
-    date: new Date().toISOString(),
-    bleeding: 0,
-    pain: 0,
-    mood: "neutral",
-    energy: 50,
-    notes: "",
-    selectedSymptoms: [] as string[],
-  });
+  const existingLog = useMemo(
+    () => logs.find((log) => normalizeDateKey(log.date) === selectedDateKey),
+    [logs, selectedDateKey],
+  );
+
+  const [formData, setFormData] = useState<SymptomLogEntry>(() =>
+    existingLog ?? createSymptomLog(selectedDate ?? new Date()),
+  );
+
+  useEffect(() => {
+    setFormData(existingLog ?? createSymptomLog(selectedDate ?? new Date()));
+  }, [existingLog, selectedDate]);
 
   const symptoms = [
     "Cramps", "Headache", "Bloating", "Fatigue", "Nausea",
@@ -37,9 +44,36 @@ export function SymptomLog() {
   };
 
   const handleSave = () => {
-    setLogs([...logs, { ...formData, id: Date.now() }]);
-    navigate("/");
+    const nextEntry = {
+      ...formData,
+      id: existingLog?.id ?? formData.id,
+      date: createSymptomLog(selectedDate ?? new Date()).date,
+    };
+
+    setLogs((previousLogs) => {
+      const nextLogs = [...previousLogs];
+      const existingIndex = nextLogs.findIndex(
+        (log) => normalizeDateKey(log.date) === selectedDateKey,
+      );
+
+      if (existingIndex >= 0) {
+        nextLogs[existingIndex] = nextEntry;
+      } else {
+        nextLogs.unshift(nextEntry);
+      }
+
+      return nextLogs;
+    });
+
+    navigate(selectedDate ? "/calendar" : "/");
   };
+
+  const displayDate = new Date(formData.date).toLocaleDateString("en-US", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
 
   return (
     <div className="min-h-screen bg-neutral-50">
@@ -49,7 +83,10 @@ export function SymptomLog() {
           <Button variant="ghost" size="icon" onClick={() => navigate(-1)}>
             <ArrowLeft className="w-5 h-5" />
           </Button>
-          <h1 className="text-lg font-semibold">Log Symptoms</h1>
+          <div className="text-center">
+            <h1 className="text-lg font-semibold">Log Symptoms</h1>
+            <p className="text-xs text-neutral-500">{displayDate}</p>
+          </div>
           <Button onClick={handleSave} size="icon" className="bg-teal-600 hover:bg-teal-700">
             <Check className="w-5 h-5" />
           </Button>
